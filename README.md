@@ -1,4 +1,5 @@
 # CWGossel.github.io
+<h3>To do list</h3>
 <li>Fix main image on index being flipped on mobile </li>
 <li>Create a couple more page examples</li>
 <li>Java leaflets for map</li>
