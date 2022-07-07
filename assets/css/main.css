@@ -2079,6 +2079,12 @@ button,
         position: absolute;
         top: 1em;
         width: 5em; } }
+#sidebar.is-hidden {
+    transform: translateY(-100%);
+}
+#sidebar.is-visible {
+    transform: translateY(0);
+}
 
 /* Header */
 #header {
@@ -2290,3 +2296,4 @@ twitter-timeline{
       margin: 0 0 1.5em 0;
       padding: 0 0 1.5em 0; 
 }
+
