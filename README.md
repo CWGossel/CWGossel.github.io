@@ -6,3 +6,4 @@
 <li>Sidebar to dissappear when scrolling down and re-appear when scrolling up (only on mobile?)</li>
 <li>Blog style input system</li>
 <li>Wiki page</li>
+<li>Add form for membership</li>
