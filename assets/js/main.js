@@ -74,7 +74,7 @@
 			$sidebar_inner = $sidebar.children('.inner');
     //Dissapear on Mobile
     window.addEventListener("resize", function() {
-	if (window.matchMedia("(max-width: 736px)").matches) {
+	if (window.matchMedia("(min-width: 736px)").matches) {
 		
 let scrollPos = 0;
 const nav = document.querySelector('#sidebar');
