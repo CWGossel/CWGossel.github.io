@@ -42,10 +42,14 @@
                                         <div id="map"></div>
                                         <script>
                                        var map = L.map('map').setView([53.226607, -4.130084], 9);
-                                          L.tileLayer("http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png").addTo(map);
-						L.tileLayer("http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png").addTo(map);
+                                          L.tileLayer("http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png", {
+                                              attribution: "© OpenMapTiles"
+                                          }).addTo(map)
+                                         L.tileLayer("http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png").addTo(map);
+                                            
                                         var marker = L.marker([53.238714, -4.019243]);
-                                        marker.bindPopup("<b>Henfaes Research Farm</b><br>Owned and maintained by Bangor University, Henfaes features a 30-year old agroforestry system of clustered trees in a silvopasture").openPopup()
+                                        marker.bindPopup('<b>Henfaes Research Farm</b><br>Owned and maintained by Bangor University, Henfaes features a 30-year old agroforestry system of clustered trees in a silvopasture. <p> The species involved include:<li>Alder</li><li>Conifer</li><li>Sycamore</li></p><p>Find more about the project <a href="https://www.bangor.ac.uk/natural-sciences/research/environment-natural-resources-and-geography/facilities/henfaes.php.en" target="_blank" rel="noopener noreferrer">here.</a>'
+                                       ).openPopup()
                                         .addTo(map);
                                         </script>
 								</section>
@@ -65,7 +69,7 @@
 								</section>
                             -->
 							<!-- Menu -->
-									<nav id="menu">
+								<nav id="menu">
 									<header class="major">
 										<h2>Menu</h2>
 									</header>
