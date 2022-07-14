@@ -25,6 +25,7 @@
 	        user-select: none;
 	  -webkit-user-drag: none;
 	}
+
 /* Prevents IE11 from highlighting tiles in blue */
 .leaflet-tile::selection {
 	background: transparent;
@@ -659,8 +660,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 {
   margin: auto;
   width: 100%;
-height: 27em;}
+height: 61vh;}
   @media screen and (max-width: 980px) {
     #map {
       margin: 0 0 2em 0;
-      width: 100%; }
+      width: 100%;
+      height: 61vh;}
