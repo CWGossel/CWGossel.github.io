@@ -4,6 +4,6 @@
 <li>Java leaflets for map https://leafletjs.com/ - filters later on</li>
 <li>Gallery option for pictures</li>
 <li><s>Sidebar to dissappear when scrolling down and re-appear when scrolling up (only on mobile?)</s></li>
-<li>Blog style input system - form</li>
+<li>Blog style input system - form - Would only allow text input without markdown or images</li>
 <li>Wiki page - filters</li>
 <li><s>Add form for membership</s></li>
