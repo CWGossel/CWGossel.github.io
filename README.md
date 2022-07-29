@@ -7,3 +7,4 @@
 <li>Blog style input system - form - Would only allow text input without markdown or images</li>
 <li>Wiki page - filters</li>
 <li><s>Add form for membership</s></li>
+<li>Change index links to be outside of folder</li>
