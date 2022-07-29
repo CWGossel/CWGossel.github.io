@@ -53,7 +53,7 @@
                                         var MapIcon = L.Icon.extend({
                                             options: {
                                                 shadowURL:"Leaflet/images/marker-shadow.png",
-                                                iconSize:     [40, 41],
+                                                iconSize:     [30, 50],
                                                 shadowSize:   [50, 64],
                                                 iconAnchor:   [12, 40],
                                                 shadowAnchor: [0, 0],
@@ -63,7 +63,7 @@
                                             var redIcon = new MapIcon({iconUrl: "Leaflet/images/icon-red.png"});
                                             L.marker([53.238714, -4.019243], {icon: redIcon}).addTo(map).bindPopup('<b>Henfaes Research Farm</b><br>Owned and maintained by Bangor University, Henfaes features a 30-year old agroforestry system of clustered trees in a silvopasture. <p> The species involved include:<li>Alder</li><li>Conifer</li><li>Sycamore</li></p><p>Find more about the project <a href="https://www.bangor.ac.uk/natural-sciences/research/environment-natural-resources-and-geography/facilities/henfaes.php.en" target="_blank" rel="noopener noreferrer">here.</a>');
                                             
-                                            var blueIcon = new MapIcon({iconUrl: "Leaflet/images/marker-icon.png"});
+                                            var blueIcon = new MapIcon({iconUrl: "Leaflet/images/icon-blue.png"});
                                             L.marker([53.230014, -4.103388], {icon: blueIcon}).addTo(map).bindPopup("I am an agroforestry consultant Icon")
                                             
                                             var yellowIcon =new MapIcon({iconUrl: "Leaflet/images/icon-yellow.png"});
