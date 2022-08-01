@@ -1,4 +1,4 @@
-# <a href="CWGossel.github.io">cwgossel.github.io
+# <a href="https://cwgossel.github.io/">CWGossel.github.io</a>
 <h3>To do list</h3>
 <li>Fix main image on index being flipped on mobile </li>
 <li>Java leaflets for map https://leafletjs.com/ - filters later on</li>
