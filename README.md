@@ -1,4 +1,4 @@
-# CWGossel.github.io
+# <a href="CWGossel.github.io">cwgossel.github.io
 <h3>To do list</h3>
 <li>Fix main image on index being flipped on mobile </li>
 <li>Java leaflets for map https://leafletjs.com/ - filters later on</li>
@@ -8,4 +8,4 @@
 <li>Wiki page - filters</li>
 <li><s>Add form for membership</s></li>
 <li>Add example articles and projects</li>
-<li>Add links</li>
+<li><s>Add links</s></li>
