@@ -9,3 +9,4 @@
 <li><s>Add form for membership</s></li>
 <li>Add example articles and projects</li>
 <li><s>Add links</s></li>
+<li>Searchable list of map items</li>
