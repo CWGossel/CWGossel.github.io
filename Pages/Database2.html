@@ -6,14 +6,10 @@
 -->
 <html>
 	<head>
-		<title>Map</title>
+		<title>Database</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
-        <link rel="stylesheet" href="/Leaflet/leaflet.css" />
-        <script src="/Leaflet/leaflet.js"></script>
-        <script src="/Leaflet/leaflet-providers.js"></script>
-
 	</head>
 	<body class="is-preload">
 
@@ -37,40 +33,58 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1 class="map">Map</h1>
-                                    </header>
-                                    <p class="map"> This map features the locations of <span style="color: tomato">Agroforestry sites</span>, <span style="color: dodgerblue">consultants</span>, and <span style="color: orange">associates</span>. A brief description can be brought up by clicking on the icon.</p>
-                                        <div id="map"></div>
-                                        <script>
-                                       var map = L.map('map').setView([53.226607, -4.130084], 9);
-                                          L.tileLayer("http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png", {
-                                              attribution: "© OpenMapTiles"
-                                          }).addTo(map)
-                                         L.tileLayer("http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png").addTo(map);
-                                            
-                                      
-                                            
-                                        var MapIcon = L.Icon.extend({
-                                            options: {
-                                                shadowURL:"/Leaflet/images/marker-shadow.png",
-                                                iconSize:     [30, 50],
-                                                shadowSize:   [50, 64],
-                                                iconAnchor:   [12, 40],
-                                                shadowAnchor: [0, 0],
-                                                popupAnchor:  [0, -35]
-                                            }
-                                        });
-                                            var redIcon = new MapIcon({iconUrl: "/Leaflet/images/icon-red.png"});
-                                            L.marker([53.238714, -4.019243], {icon: redIcon}).addTo(map).bindPopup('<b>Henfaes Research Farm</b><br>Owned and maintained by Bangor University, Henfaes features a 30-year old agroforestry system of clustered trees in a silvopasture. <p> The species involved include:<li>Alder</li><li>Conifer</li><li>Sycamore</li></p><p>Find more about the project <a href="https://www.bangor.ac.uk/natural-sciences/research/environment-natural-resources-and-geography/facilities/henfaes.php.en" target="_blank" rel="noopener noreferrer">here.</a>');
-                                            
-                                            var blueIcon = new MapIcon({iconUrl: "/Leaflet/images/icon-blue.png"});
-                                            L.marker([53.230014, -4.103388], {icon: blueIcon}).addTo(map).bindPopup("I am an agroforestry consultant Icon")
-                                            
-                                            var yellowIcon =new MapIcon({iconUrl: "/Leaflet/images/icon-yellow.png"});
-                                            L.marker([53.176323, -4.058316], {icon: yellowIcon}).addTo(map).bindPopup("I am an agroforestry associate icon.");
-                                        </script>
+										<h1>Database</h1>
+									</header>
+                                    <input id="search form" type="text" onkeyup="myFunctionTest()" placeholder="search here" title="search">
+								<br>
+                                <table id="table">
+                                    <thead id="th"></thead>
+                                    <tbody id="table-body"></tbody>
+                                </table>
+                                     <script>
+    {
+      {
+        // Your API KEY
+        const API_KEY = "AIzaSyDZxxpMbXOM_0pPPPI2sz_tBkmXwmDC5qw";
 
-								</section>
+        function displayResult2(response) {
+          let tableHead = "";
+          let tableBody = "";
+
+          response.result.values.forEach((row, index) => {
+            if (index === 0) {
+              tableHead += "<tr>";
+              row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
+              tableHead += "</tr>";
+            } else {
+              tableBody += "<tr>";
+              row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+              tableBody += "</tr>";
+            }
+          });
+
+          document.getElementById("th").innerHTML = tableHead;
+          document.getElementById("table-body").innerHTML = tableBody;
+        }
+
+        function loadData() {
+          // Spreadsheet ID
+          const spreadsheetId = "1vayYPdfhduugYzc9ZZ0v3EDVsDAF6OCnyW9M10t8gQA";
+          const range = "A:Z";
+          getPublicValues({ spreadsheetId, range }, displayResult2);
+        }
+
+        window.addEventListener("load", (e) => {
+          initOAuthClient({ apiKey: API_KEY });
+        });
+
+        document.addEventListener("gapi-loaded", (e) => {
+          loadData();
+        });
+      }
+    }
+  </script>
+                                </section>
 
 						</div>
 					</div>
@@ -87,7 +101,7 @@
 								</section>
                             -->
 							<!-- Menu -->
-								<nav id="menu">
+									<nav id="menu">
 									<header class="major">
 										<h2>Menu</h2>
 									</header>
@@ -179,6 +193,8 @@
 			<script src="/assets/js/breakpoints.min.js"></script>
 			<script src="/assets/js/util.js"></script>
 			<script src="/assets/js/main.js"></script>
-
+            <script src="/assets/js/Database2.js"></script>
+            <script src="https://apis.google.com/js/api.js"></script>
+            <script type="text/javascript" src="/Database2.js"></script>
 	</body>
 </html>
