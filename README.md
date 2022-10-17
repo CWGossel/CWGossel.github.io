@@ -8,5 +8,5 @@
 <li><s>Add form for membership</s></li>
 <li>Add example articles and projects</li>
 <li><s>Add links</s></li>
-<li>Searchable database</li>
+<li>Searchable database - link google form to sheets</li>
 <li>Forum plug-in?</li>
