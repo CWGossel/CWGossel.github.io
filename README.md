@@ -10,3 +10,4 @@
 <li><s>Add links</s></li>
 <li><s>Searchable database - link google form to sheets</s></li>
 <li>Forum plug-in?</li>
+<li>Insert pages at bottom of articles archive</li>
