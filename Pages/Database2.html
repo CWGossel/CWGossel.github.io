@@ -35,6 +35,7 @@
 									<header class="main">
 										<h1>Database</h1>
 									</header>
+                                    <p class="map">Please fill out <a href="https://forms.gle/MqiTJf6tMaBTmcMXA" target="_blank">this form</a> to add a new agroforestry farm to this database.</p>
                                     <input id="search form" type="text" onkeyup="myFunctionTest()" placeholder="search here" title="search">
 								<br>
                                 <table id="table">
@@ -70,7 +71,7 @@
         function loadData() {
           // Spreadsheet ID
           const spreadsheetId = "1vayYPdfhduugYzc9ZZ0v3EDVsDAF6OCnyW9M10t8gQA";
-          const range = "A:Z";
+          const range = "B:Z";
           getPublicValues({ spreadsheetId, range }, displayResult2);
         }
 
